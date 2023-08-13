@@ -53,7 +53,7 @@ describe('Login Router', () => {
     expect(httpResponse.statusCode).toBe(500)
   })
 
-  test('Should return 500 if no httpRequest has no body', () => {
+  test('Should call AuthUseCase with correct params', () => {
     const { sut, authUseCaseSpy } = makeSut()
     const httpRequest = {
       body: {
