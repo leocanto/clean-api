@@ -6,6 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "lint-staged": {
+    "*.js": [
+      "standard --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/leocanto/clean-api.git"
@@ -15,5 +26,10 @@
   "bugs": {
     "url": "https://github.com/leocanto/clean-api/issues"
   },
-  "homepage": "https://github.com/leocanto/clean-api#readme"
+  "homepage": "https://github.com/leocanto/clean-api#readme",
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "standard": "^17.1.0"
+  }
 }
