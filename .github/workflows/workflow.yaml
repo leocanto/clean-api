@@ -8,7 +8,7 @@ on:
 
 jobs: 
   continuous-integration:
-    runs-on: windows-latest
+    runs-on: ubuntu-18.4
     steps:
       - uses: actions/checkout@v2
       - name: Using Node.js
